@@ -11,13 +11,11 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "rubydex", require: false
+  gem "rubocop", require: false
+  gem "standard", "1.56.0", require: false
 end
-gem "perron"
 
-# Perron supports Markdown rendering using one of the following gems.
-# Uncomment your preferred choice and run `bundle install`
-# gem "commonmarker"
+gem "perron"
 gem "kramdown"
-# gem "redcarpet"
+gem "pry-rails"
