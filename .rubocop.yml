@@ -1,0 +1,42 @@
+AllCops:
+  TargetRubyVersion: 4.0
+  NewCops: enable
+  UseProjectIndex: true
+  ProjectIndexIncludesGems: true
+  Exclude:
+    - "bin/*"
+
+# Standard rules. Style:
+
+# Enforced by `standard`. Disable.
+Style/StringLiterals:
+  Enabled: false
+
+# Standard rules. Layout:
+
+# Enforced by `standard`. Disable.
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+# Our `rubocop` rules
+
+# Bundler rules.
+
+Bundler/OrderedGems:
+  Enabled: false
+
+# Style rules
+
+# Don't allow %i[foo bar baz]
+Style/SymbolArray:
+  Enabled: true
+  EnforcedStyle: brackets
+
+# Don't allow %w[foo bar baz]
+Style/WordArray:
+  Enabled: true
+  EnforcedStyle: brackets
+
+# Disable warnings like "Missing top-level documentation comment for"
+Style/Documentation:
+  Enabled: false

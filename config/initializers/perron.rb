@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Perron.configure do |config|
   # For all options check out:
   # https://perron.railsdesigner.com/docs/configuration/
