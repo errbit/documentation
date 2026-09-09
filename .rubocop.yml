@@ -12,7 +12,18 @@ AllCops:
 Style/StringLiterals:
   Enabled: false
 
+# Standard rules. Layout:
+
+# Enforced by `standard`. Disable.
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
 # Our `rubocop` rules
+
+# Bundler rules.
+
+Bundler/OrderedGems:
+  Enabled: false
 
 # Style rules
 
@@ -25,3 +36,7 @@ Style/SymbolArray:
 Style/WordArray:
   Enabled: true
   EnforcedStyle: brackets
+
+# Disable warnings like "Missing top-level documentation comment for"
+Style/Documentation:
+  Enabled: false
