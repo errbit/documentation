@@ -27,3 +27,6 @@
 /config/*.key
 
 /output/
+
+# Ignore rubymine files
+/.idea/*
