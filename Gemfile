@@ -15,3 +15,4 @@ end
 
 gem "perron"
 gem "kramdown"
+gem "pry-rails"
