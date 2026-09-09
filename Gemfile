@@ -11,6 +11,7 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 group :development, :test do
+  gem "rubydex", require: false
   gem "rubocop", require: false
   gem "standard", "1.56.0", require: false
 end
