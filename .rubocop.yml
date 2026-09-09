@@ -3,6 +3,14 @@ AllCops:
   NewCops: enable
   UseProjectIndex: true
   ProjectIndexIncludesGems: true
+  Exclude:
+    - "bin/*"
+
+# Standard rules. Style:
+
+# Enforced by `standard`. Disable.
+Style/StringLiterals:
+  Enabled: false
 
 # Our `rubocop` rules
 
