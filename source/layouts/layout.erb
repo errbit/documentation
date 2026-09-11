@@ -4,10 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <title>
+      <% if current_page.data.title.present? %>
+        <%= current_page.data.title %> | Errbit
+      <% else %>
+        Errbit
+      <% end %>
+    </title>
+    <%= stylesheet_link_tag "bootstrap" %>
+    <%= javascript_include_tag "bootstrap.bundle", defer: true %>
   </head>
 
   <body>
