@@ -196,6 +196,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.5)
   middleman-autoprefixer (~> 3.0)
+  rubocop
   standard (= 1.56.0)
   terser (~> 1.1)
   tzinfo-data
