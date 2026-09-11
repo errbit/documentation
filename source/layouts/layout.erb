@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title>
+      <% if current_page.data.title.present? %>
+        <%= current_page.data.title %> | Errbit
+      <% else %>
+        Errbit
+      <% end %>
+    </title>
     <%= stylesheet_link_tag "bootstrap" %>
     <%= javascript_include_tag "bootstrap.bundle" %>
   </head>
