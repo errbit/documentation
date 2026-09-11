@@ -7,6 +7,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby, :x64_mingw]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw, :x64_mingw]
 
 group :development, :test do
+  gem "rubydex", require: false
   gem "rubocop", require: false
   gem "standard", "1.56.0", require: false
 end
