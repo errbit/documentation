@@ -3,3 +3,128 @@ title: "Release notes for v0.11.0"
 ---
 
 <h1>Release notes for v0.11.0</h1>
+
+<br>
+
+<h2>Notable changes:</h2>
+
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item">
+    This is the last release that supports MongoDB
+  </li>
+
+  <li class="list-group-item">
+    Upgrade to Ruby 4.0.5
+  </li>
+
+  <li class="list-group-item">
+    Upgrade to RubyGems 4.0.13
+  </li>
+
+  <li class="list-group-item">
+    Upgrade to Bundler 4.0.13
+  </li>
+
+  <li class="list-group-item">
+    Upgrade to Rails 8.1.3
+  </li>
+
+  <li class="list-group-item">
+    Drop JRuby support
+  </li>
+
+  <li class="list-group-item">
+    Remove Gtalk notification service (#2517). Gtalk is dead.
+  </li>
+
+  <li class="list-group-item">
+    Remove HipChat notification service (#2524). HipChat is dead.
+  </li>
+
+  <li class="list-group-item">
+    Drop support for MongoDB 4.0, 4.2, 4.4, 5.0 and 6.0.
+  </li>
+
+  <li class="list-group-item">
+    Add support for MongoDB 8.2.
+  </li>
+
+  <li class="list-group-item">
+    <code>Dockerfile.alpine</code> removed. We don't want to support two docker builds.
+  </li>
+</ol>
+
+<br>
+
+<h2>Fixes:</h2>
+
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item">
+    Fix API JSON serialization for Mongoid documents (PR #2597) by @elektronaut
+  </li>
+  <li class="list-group-item">
+    Fix <code>ResolvedProblemClearer</code>. Compact can fail (second case for #1551). PR #1905.
+  </li>
+</ol>
+
+<br>
+
+<h2>Changes:</h2>
+
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item">
+    Migrate <code>app/views/**/*.haml.erb</code> to <code>app/views/**/*.html.erb</code>. Thanks, @ramonetorres. (#1853)
+  </li>
+
+  <li class="list-group-item">
+    Strict locals for ActionView (#1889, #1897).
+  </li>
+
+  <li class="list-group-item">
+    Add GitHub Action for Bundler Audit (#1901).
+  </li>
+
+  <li class="list-group-item">
+    Replace Fabrication with FactoryBot (#1862).
+  </li>
+
+  <li class="list-group-item">
+    Replace outdated <code>ri_cal</code> gem with <code>icalendar</code> (#2407).
+  </li>
+
+  <li class="list-group-item">
+    Replace outdated <code>rushover</code> gem with <code>pushover2</code> (#1852).
+  </li>
+
+  <li class="list-group-item">
+    Start integrating the <code>pundit</code> gem. From now on, only admin users can see all users.
+  </li>
+
+  <li class="list-group-item">
+    Add Brakeman GitHub Action.
+  </li>
+
+  <li class="list-group-item">
+    Add <code>.editorconfig</code>
+  </li>
+
+  <li class="list-group-item">
+    Integrate Trivy for container image scanning.
+  </li>
+
+  <li class="list-group-item">
+    The deprecated <code>sucker_punch</code> gem was removed. Active Job now uses the <code>async</code> queue adapter instead.
+  </li>
+
+  <li class="list-group-item">
+    Remove dead assets for Gtalk: <code>app/assets/images/gtalk_create.png</code>, <code>app/assets/images/gtalk_goto.png</code> and <code>app/assets/images/gtalk_inactive.png</code>.
+  </li>
+
+  <li class="list-group-item">
+    Remove dead assets for HipChat: <code>app/assets/images/hipchat_create.png</code>, <code>app/assets/images/hipchat_goto.png</code> and <code>app/assets/images/hipchat_inactive.png</code>.
+  </li>
+
+  <li class="list-group-item">
+    Add mailer previews.
+  </li>
+</ol>
